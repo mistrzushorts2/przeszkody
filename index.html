@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uniknij Mistrzowskich Przeszkód</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="author" content="Mistrzu-shorts">
+  <meta name="description" content="data powstania gry: 08.11.2025">
+</head>
+<body>
+
+  <!-- w HTML tuż przed menu -->
+  <div id="menuBackground"></div>
+  
+  <div id="menu">
+     <div class="sigma">
+    <h4>Nowa aktualizacja wkrótce....</h4>
+  </div>
+   
+   <div class="wersja">
+     <h3>Aktualizacja 09.12.2025 - Wersja 1.1<br>
+    Czy zdołasz przejść 30 poziomów?
+    </h3>
+   </div>
+   <h4>Autor, Twórca, I Modyfikator - Mistrzu shorts</h4>
+    <h1>Uniknij Mistrzowskich Przeszkód</h1>
+    <button id="startBtn">▶ START</button>
+
+    <div id="rankingPanel" class="ranking-container">
+      <div id="localRanking" class="ranking-box">
+        <h2>🏆 Lokalny TOP 10</h2>
+        <table id="rankingTable">
+          <thead>
+            <tr><th>Nick</th><th>Punkty</th><th>Poziom</th></tr>
+          </thead>
+          <tbody id="rankingBody"></tbody>
+        </table>
+        <div id="resetSection">
+          <input type="password" id="resetPass" placeholder="Hasło...">
+          <button id="resetRankingBtn">Resetuj tabelę</button>
+        </div>
+      </div>
+
+      <div id="globalRanking" class="ranking-box">
+        <h2>🌐 Globalny TOP 10</h2>
+        <table id="globalRankingTable">
+          <thead>
+            <tr><th>Nick</th><th>Punkty</th><th>Poziom</th><th>Czas</th><th>Data</th></tr>
+          </thead>
+          <tbody id="globalRankingBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <canvas id="gameCanvas"></canvas>
+
+  <div id="ui">
+    <div id="scoreInfo">
+      <span>Punkty: <span id="score">0</span></span>
+      <span>Poziom: <span id="level">1</span></span>
+    </div>
+    <div id="progressBar">
+      <div id="progressFill"></div>
+    </div>
+  </div>
+
+  <div id="controls">
+    <button id="left">←</button>
+    <button id="up">↑</button>
+    <button id="right">→</button>
+  </div>
+
+  <div id="gameOver">
+    <h2>Koniec gry!</h2>
+    <p>Twój wynik: <span id="finalScore">0</span> | Poziom: <span id="finalLevel">1</span></p>
+    <div id="nicknameInput">
+      <input type="text" id="nickname" placeholder="Twój nick (max 22)" maxlength="22">
+      <button id="saveScoreBtn">Zapisz wynik</button>
+    </div>
+    <button id="restartBtn">♿️Zagraj ponownie♿️</button>
+  </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
